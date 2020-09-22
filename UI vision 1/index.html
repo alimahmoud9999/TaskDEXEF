@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task DEXEF</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- Start Side Nav -->
+    <nav class="side-nave">
+        <span class="bars"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <ul class="list-nav list-unstyled">
+            <li><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a class="active" href=""><i class="fa fa-cc-visa" aria-hidden="true"></i>
+                </a></li>
+            <li><a href=""><i class="fa fa-star" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-suitcase" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-plus-square" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-question-circle" aria-hidden="true"></i></a></li>
+        </ul>
+    </nav>
+    <!-- End Side Nav -->
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="bars"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <a class="navbar-brand" href="#">Task DEXEF</a>
+        <form class="form-inline my-2 my-lg-0 d-none d-xl-block">
+            <input class="form-control mr-sm-2" type="search" placeholder="Invoice Number" aria-label="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </form>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item  ">
+                <a class="nav-link d-block  d-xl-none " href="#">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="nav-item nav-img">
+                <a class="nav-link " href="#">
+                    <img src="img/avatar.png" alt="">
+                </a>
+            </li>
+        </ul>
+
+        <!-- Start Serch Visble in lg & md & sm Screen -->
+        <div class="serch">
+            <form>
+                <label for="">
+                    <input type="text" placeholder="Invoice Number">
+                    <i class="fa fa-search"></i>
+                </label>
+                <i class="fa fa-close"></i>
+            </form>
+        </div>
+        <!-- End Serch Visble in lg & md & sm Screen -->
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Start Section Sales Invoice -->
+            <div class="col-md-12 col-lg-6">
+                <div class="sales">
+                    <div class="row">
+                        <div class="col-8">
+                            <h1 class="sales-title">Sales Invoice <i class="fa fa-print"></i></h1>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn invoice btn-block" data-toggle="modal" data-target="#exampleModal">
+                                <i class="fa fa-plus"></i>
+                                <span>new invoice</span>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Invoice No.</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Sold Items</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                    <tr>
+                                        <th scope="row">#4743783</th>
+                                        <td>Ali Mahmoud</td>
+                                        <td>5</td>
+                                        <td>1200 AED</td>
+                                        <td><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">#7893783</th>
+                                        <td>Amr Nabile</td>
+                                        <td>10</td>
+                                        <td>1200 AED</td>
+                                        <td><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">#9563744</th>
+                                        <td>Ali Mahmoud</td>
+                                        <td>10</td>
+                                        <td>1200 AED</td>
+                                        <td><span></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--  Start Modal Add Sales Invoices-->
+                            <div class="modal fade show" id="exampleModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="">Invoice No.</label>
+                                                            <input id="invoice" type="text" placeholder="Invoice No.">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="">Customer</label>
+                                                            <input id="customer" type="text" placeholder="Customer">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="">Sold Items</label>
+                                                            <input id="sold" type="text" placeholder="Sold Items">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="">Total</label>
+                                                            <input id="total" type="text" placeholder="Total">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                            <button id="submit" type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  End Modal Add Sales Invoices-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Section Sales Invoice -->
+            <div class="col-md-12 col-lg-6">
+                <!-- Start Section summary -->
+                <div class="summary">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="summary-title">Week summary</h1>
+                        </div>
+                    </div>
+                    <!-- Start summary Info -->
+                    <div class="summary-info">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <!-- Start summary Items -->
+                                <div class="box-content">
+                                    <ul class="list-unstyled">
+                                        <li class="active" data-item="90">
+                                            <span class="left float-left">All</span>
+                                            <span class="right float-right">10,000 AED</span>
+                                        </li>
+                                        <li data-item="70">
+                                            <span class="left float-left">Portrait</span>
+                                            <span class="right float-right">2,500 AED</span>
+                                        </li>
+                                        <li data-item="80">
+                                            <span class="left float-left">Modern</span>
+                                            <span class="right float-right">2,500 AED</span>
+                                        </li>
+                                        <li data-item="60">
+                                            <span class="left float-left">Sketches</span>
+                                            <span class="right float-right">2,500 AED</span>
+                                        </li>
+                                        <li data-item="99">
+                                            <span class="left float-left">Natural</span>
+                                            <span class="right float-right">2,500 AED</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End summary Items -->
+                            </div>
+                            <!-- Start Total Items -->
+                            <div class="col-md-2">
+                                <div class="total">
+                                    <h1>
+                                        98
+                                    </h1>
+                                    <span>Total Items</span>
+                                </div>
+                            </div>
+                             <!-- End Total Items -->
+                            <div class="col-md-5"><canvas id="myChart"></canvas></div>
+                        </div>
+                    </div>
+                    <!--  Start summary Info -->
+                </div>
+                <!-- End Section summary -->
+                <!-- Strat Section Top Custmoers and Sales-->
+                <div class="top">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="tabs">
+                                <li class="active" id="customers">
+                                    <i class="fa fa-shopping-basket"></i>
+                                    Top Customers
+                                </li>
+                                <li id="sales">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    Top sales
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12">
+                            <!-- Start Tabs Content --> 
+                            <div class="tabs-content" id="top-customers" >
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!-- Start Section Top Person -->
+                                        <div class="top-person">
+                                           <div class="person first">
+                                            <img src="img/person3.jpeg" alt="">
+                                            <span class="sort">1</span>
+                                            <i class="fa fa-shopping-basket"><span class="itm">23</span></i>
+                                           </div>
+                                           <div class="person second">
+                                                <img src="img/person.jpg" alt="">
+                                                <span class="sort">2</span>
+                                            <i class="fa fa-shopping-basket"><span class="itm">12</span></i>
+                                               </div>
+                                               <div class="person therd">
+                                                    <img src="img/person4.jpg" alt="">
+                                                    <span class="sort">3</span>
+                                            <i class="fa fa-shopping-basket"><span class="itm">6</span></i>
+                                                </div>
+                                        </div>
+                                          <!-- End Section Top Person -->
+                                    </div>
+                                    <div class="col-6">
+                                        <!--Start Section Top All Person  -->
+                                        <div class="all-person">
+                                            <div class="person">
+                                                <div class="num">
+                                                        <img src="img/person3.jpeg" alt="">
+                                                        <span class="color1">1</span>
+                                                </div>
+                                                <div class="info">
+                                                        <h5>Ahmed Omar</h5>
+                                                        <p><span>23 </span>Sales transaction</p>
+                                                </div>
+                                            </div>
+                                            <div class="person">
+                                                    <div class="num">
+                                                            <img src="img/person.jpg" alt="">
+                                                            <span class="color2">2</span>
+                                                    </div>
+                                                    <div class="info">
+                                                            <h5>Aml Omar</h5>
+                                                            <p><span>23 </span>Sales transaction</p>
+                                                    </div>
+                                                </div>
+                                                <div class="person">
+                                                        <div class="num">
+                                                                <img src="img/person4.jpg" alt="">
+                                                                <span class="color3">3</span>
+                                                        </div>
+                                                        <div class="info">
+                                                                <h5>Asem Omar</h5>
+                                                                <p><span>23 </span>Sales transaction</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="person">
+                                                            <div class="num">
+                                                                    <img src="img/person.jpg" alt="">
+                                                                    <span class="">4</span>
+                                                            </div>
+                                                            <div class="info">
+                                                                    <h5>Asem Omar</h5>
+                                                                    <p><span>23 </span>Sales transaction</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="person">
+                                                                <div class="num">
+                                                                        <img src="img/person.jpg" alt="">
+                                                                        <span class="">5</span>
+                                                                </div>
+                                                                <div class="info">
+                                                                        <h5>Asem Omar</h5>
+                                                                        <p><span>23 </span>Sales transaction</p>
+                                                                </div>
+                                                            </div>
+                                        </div>
+                                        <!--Start Section Top All Person  -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content" id="top-sales">
+                                    <div class="row">
+                                            <div class="col-6">
+                                                <!-- Start Section Top Person -->
+                                                <div class="top-person">
+                                                   <div class="person first">
+                                                    <img src="img/person3.jpeg" alt="">
+                                                    <span class="sort">1</span>
+                                                    <i class="fa fa-shopping-basket"><span class="itm">23</span></i>
+                                                   </div>
+                                                   <div class="person second">
+                                                        <img src="img/person2.jpg" alt="">
+                                                        <span class="sort">2</span>
+                                                    <i class="fa fa-shopping-basket"><span class="itm">12</span></i>
+                                                       </div>
+                                                       <div class="person therd">
+                                                            <img src="img/person4.jpg" alt="">
+                                                            <span class="sort">3</span>
+                                                    <i class="fa fa-shopping-basket"><span class="itm">6</span></i>
+                                                        </div>
+                                                </div>
+                                                  <!-- End Section Top Person -->
+                                            </div>
+                                            <div class="col-6">
+                                                <!--Start Section Top All Person  -->
+                                                <div class="all-person">
+                                                    <div class="person">
+                                                        <div class="num">
+                                                                <img src="img/person3.jpeg" alt="">
+                                                                <span class="color1">1</span>
+                                                        </div>
+                                                        <div class="info">
+                                                                <h5>Ahmed Omar</h5>
+                                                                <p><span>23 </span>Sales transaction</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="person">
+                                                            <div class="num">
+                                                                    <img src="img/person2.jpg" alt="">
+                                                                    <span class="color2">2</span>
+                                                            </div>
+                                                            <div class="info">
+                                                                    <h5>Aml Omar</h5>
+                                                                    <p><span>23 </span>Sales transaction</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="person">
+                                                                <div class="num">
+                                                                        <img src="img/person4.jpg" alt="">
+                                                                        <span class="color3">3</span>
+                                                                </div>
+                                                                <div class="info">
+                                                                        <h5>Asem Omar</h5>
+                                                                        <p><span>23 </span>Sales transaction</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="person">
+                                                                    <div class="num">
+                                                                            <img src="img/person2.jpg" alt="">
+                                                                            <span class="">4</span>
+                                                                    </div>
+                                                                    <div class="info">
+                                                                            <h5>Asem Omar</h5>
+                                                                            <p><span>23 </span>Sales transaction</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="person">
+                                                                        <div class="num">
+                                                                                <img src="img/person2.jpg" alt="">
+                                                                                <span class="">5</span>
+                                                                        </div>
+                                                                        <div class="info">
+                                                                                <h5>Asem Omar</h5>
+                                                                                <p><span>23 </span>Sales transaction</p>
+                                                                        </div>
+                                                                    </div>
+                                                </div>
+                                                <!--Start Section Top All Person  -->
+                                            </div>
+                                        </div>
+                             </div>
+                            <!-- End Tabs Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

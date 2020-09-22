@@ -1,0 +1,23 @@
+// Import Vras File 
+@import 'scss/vars';
+
+//import Font
+@font-face {
+    font-family: 'Sarabun-Regular';
+    src: url("../fonts/Sarabun-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Sarabun-bold';
+    src: url("../fonts/Sarabun-ExtraBold.ttf") format('truetype');
+}
+
+body {
+    font-family: $f-normal !important;
+    background-color: #f8f9fa;
+    position: relative;
+}
+//Import Navbar
+@import 'scss/navbar';
+//Import Home Style
+@import 'scss/home';

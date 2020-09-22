@@ -1,0 +1,199 @@
+/*Start Side Bar*/
+.side-nave {
+    width: 7%;
+    float: left;
+    background-color: #fff;
+    height: 100vh;
+    text-align: center;
+
+    .bars {
+        display: block;
+        margin-top: 23px;
+        font-size: 23px;
+        color: #818e94;
+        cursor: pointer;
+    }
+
+    .list-nav {
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+
+        li {
+            margin-bottom: 30px;
+
+            a {
+                text-decoration: none;
+                color: $gray-color;
+                font-size: 25px;
+
+                &:hover {
+                    color: $main-color;
+                    transition: all ease-in-out .2s;
+                }
+
+            }
+
+            .active {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+/*End Sid Bar*/
+/*Start Navbar*/
+.navbar {
+    width: 93%;
+    background-color: #fff !important;
+    border-bottom: 1px solid #eee !important;
+    padding: 0rem 1rem;
+
+    .bars {
+        display: none;
+        margin-top: 0;
+        margin-right: 15px;
+        font-size: 23px;
+        color: #818e94;
+        cursor: pointer;
+    }
+
+    .navbar-brand {
+        font-family: $f-bold;
+        font-size: 30px;
+        color: $dark-color;
+    }
+
+    .form-inline {
+        position: relative;
+
+        input {
+            width: 350px;
+            height: 80px;
+            border: none;
+            border-radius: 0%;
+            border-right: 1px solid #eee;
+            border-left: 1px solid #eee;
+            text-indent: 30px;
+
+            &:focus {
+                box-shadow: none;
+                border-left-color: $main-color;
+                border-right-color: $main-color;
+
+            }
+
+            &::placeholder {
+                color: $gray-color;
+                font-size: 19px;
+            }
+        }
+
+        .fa {
+            font-size: 20px;
+            color: $gray-color;
+            position: absolute;
+            left: 12px;
+            top: 40%;
+
+        }
+    }
+
+    .navbar-nav {
+        @media (min-width: 0) and (max-width: 991.98px) {
+            display: block;
+        }
+
+        .nav-img {
+            border-left: 1px solid #eee;
+
+            .nav-link {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+
+        .nav-link {
+            .fa {
+                color: $gray-color;
+                font-size: 20px;
+                line-height: 60px;
+                margin-right: 18px;
+            }
+        }
+
+        .nav-item {
+            @media (min-width: 0) and (max-width: 991.98px) {
+                display: inline-block;
+            }
+        }
+
+    }
+
+    .serch {
+        display: none;
+        width: 300px;
+        position: absolute;
+        border: 1px solid #eee;
+        background-color: #fff;
+        top: 174px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+
+        form {
+            width: 100%;
+
+            label {
+                margin: 20% auto;
+                position: relative;
+                width: 100%;
+
+                input {
+                    height: 40px;
+                    display: block;
+                    border: none;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-left: 1px solid #eee;
+                    border-right: 1px solid #eee;
+                    text-indent: 35px;
+
+                    &::placeholder {
+                        color: $gray-color;
+                    }
+
+                    &:focus {
+                        border-color: $main-color;
+                    }
+                }
+
+                .fa-search {
+                    position: absolute;
+                    top: 31%;
+                    left: 21%;
+                    color: $gray-color;
+                }
+            }
+
+            .fa-close {
+                cursor: pointer;
+                position: absolute;
+                top: 11px;
+                right: 11px;
+                font-size: 21px;
+                border: 1px solid #eee;
+                padding: 5px;
+                border-radius: 5px;
+
+                &:hover {
+                    border-color: #666;
+                    transition: all ease-in-out .3s;
+                }
+            }
+        }
+    }
+}
+
+/*End Navbar*/
